@@ -5,11 +5,14 @@
     --shadow:  0 2px 2px rgb(0 0 0 / 0.5);
 }
 
-body {
+html, body {
     font-size: 1.2rem;
     font-family: "Work Sans", sans-serif;
-    min-height: 4000px;
-    overflow-x: hidden;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .countdown .simply-section {
@@ -107,6 +110,7 @@ body {
     position: relative;
     min-height: 100vh;
     z-index: 1;
+    overflow-x: hidden;
 }
 
 .hero h1, .hero h4, .hero h2, .hero p {
@@ -192,6 +196,7 @@ body {
     margin-top: -6rem;
     padding-top: 15rem;
     padding-bottom: 5rem;
+    overflow-x: hidden;
 }
 
 .home h5 {
@@ -233,6 +238,7 @@ body {
     color: var(--white);
     padding-top: 10rem;
     padding-bottom: 8rem;
+    overflow-x: hidden;
 }
 
 .info .alamat {
@@ -283,6 +289,7 @@ body {
     color: var(--white);
     padding-top: 2rem;
     padding-bottom: 8rem;
+    overflow-x: hidden;
 }
 
 .quote-frame{
@@ -348,6 +355,7 @@ body {
     padding-top: 5rem;
     padding-bottom: 8rem;
     background-color: var(--bg);
+    overflow-x: hidden;
 }
 
 .gallery p {
@@ -386,6 +394,7 @@ body {
     padding-top: 5rem;
     padding-bottom: 8rem;
     background-color: var(--bg);
+    overflow-x: hidden;
 }
 
 .rsvp p {
@@ -421,6 +430,7 @@ body {
     padding-top: 5rem;
     padding-bottom: 8rem;
     background-color: var(--bg);
+    overflow-x: hidden;
 }
 
 .gifts span {
@@ -458,6 +468,7 @@ body {
     background-color: #111;
     color: white;
     padding: 100px 0;
+    overflow-x: hidden;
 }
 
 .wishes h2{

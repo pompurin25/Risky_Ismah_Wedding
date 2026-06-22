@@ -36,6 +36,7 @@ console.log(lightbox);
     <h2>The Wedding of </h2>
     <h1> Risky Agustianda <br> & <br> Nur Ismah Cahyani</h1>
     <h4>Kepada Bapak/Ibu/Saudara/i, </h4>
+    <p id="guest-name"></p>
     <p>Kami akan melangsungkan resepsi pernikahan dalam:</p>
     <div class="countdown"></div>
     <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()">Lihat Undangan</a>
@@ -110,7 +111,7 @@ console.log(lightbox);
           <div class="col-md col-10 text-center">
             <h2>Informasi Acara</h2>
             <p class="alamat">Alamat: Perumahan Kaliwungu Indah <br> Blok B12, No.14, RT 13, RW 10, Kel. Protomulyo, Kec. Kaliwungu Selatan, Kab. Kendal, Jawa Tengah</p>
-            <a href="https://maps.app.goo.gl/xAqQDwoWy4fvfsL77?g_st=ac" target="_blank" class="btn btn-light btn-sm">Klik untuk membuka lokasi</a>
+            <a href="https://maps.app.goo.gl/A9c2SZ4M2MbetN5s5" target="_blank" class="btn btn-light btn-sm">Klik untuk membuka lokasi</a>
             <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi Anda salah jadwal atau salah alamat.</p>
           </div>
         </div>
@@ -129,7 +130,7 @@ console.log(lightbox);
                 </div>
                 <div class="col-md-6">
                   <i class="bi bi-calendar-heart d-block"></i>
-                  <span>Minggu, 26 Juli 2026</span>
+                  <span>Minggu / Ahad, 26 Juli 2026</span>
                 </div>
                </div> 
               </div>
@@ -151,7 +152,7 @@ console.log(lightbox);
                 </div>
                 <div class="col-md-6">
                   <i class="bi bi-calendar-heart d-block"></i>
-                  <span>Minggu, 26 Juli 2026</span>
+                  <span>Minggu / Ahad, 26 Juli 2026</span>
                 </div>
                </div> 
               </div>
@@ -288,7 +289,7 @@ console.log(lightbox);
           <div class="card-body">
             <i class="bi bi-bank fs-1"></i>
             <h4>Bank BCA</h4>
-            <p>0800896401</p>
+            <p>No. Rekening: 0800896401</p>
             <p>a.n. Nur Ismah Cahyani</p>
 
             <button type="button" class="btn btn-outline-warning"
@@ -304,7 +305,7 @@ console.log(lightbox);
           <div class="card-body">
             <i class="bi bi-wallet2 fs-1"></i>
             <h4>Seabank</h4>
-            <p>901586501527</p>
+            <p>No. Rekening: 901586501527</p>
             <p>a.n. Nur Ismah Cahyani</p>
 
             <button type="button" class="btn btn-outline-warning"
@@ -474,6 +475,16 @@ function copyText(text) {
     <i class="bi bi-x"></i>
   </button>
 </div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+let guest = params.get("to");
+
+if (guest) {
+  guest = guest.replaceAll("-", " ");
+  document.getElementById("guest-name").innerText = guest;
+}
+</script>
 
 <script>
   const audio = document.getElementById('wedding-song');
